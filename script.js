@@ -42,7 +42,8 @@ for(const btn of allBtn){
         const totalPrice = count * 550;
         totalPriceDisplay.textContent = `${totalPrice}`;
         // grand total
-
+        const grandTotalDisplay = document.getElementById('grand-total');
+        grandTotalDisplay.textContent = `${totalPrice}`;
 
         event.target.style.backgroundColor = "#1DD100";
 
@@ -66,30 +67,30 @@ couponCodeBtn.addEventListener('click', function(){
     // const couponCode = couponField.split(" ").join('').toUpperCase();
     if(couponField === "NEW15"){
         const totalPriceDisplay = document.getElementById('total-price').innerText;
-        console.log(typeof totalPriceDisplay);
+        // console.log(typeof totalPriceDisplay);
         const totalPrice = count * 550;
         totalPriceDisplay.textContent = `${totalPrice}`;
         const discountedPrice = totalPriceDisplay * 0.15;
         console.log(discountedPrice); 
         const grandTotal = document.getElementById('grand-total');
-        grandTotal.textContent = totalPrice - discountedPrice;    
+        grandTotal.textContent = totalPrice - discountedPrice; 
+        document.getElementById('input-field').hidden = true;
+        document.getElementById('apply-btn').hidden = true;   
     }
     else if(couponField === "Couple 20"){
         const totalPriceDisplay = document.getElementById('total-price').innerText;
-        console.log(typeof totalPriceDisplay);
+        // console.log(typeof totalPriceDisplay);
         const totalPrice = count * 550;
         totalPriceDisplay.textContent = `${totalPrice}`;
         const discountedPrice = totalPriceDisplay * 0.2;
         console.log(discountedPrice); 
         const grandTotal = document.getElementById('grand-total');
         grandTotal.textContent = totalPrice - discountedPrice;
-        // document.getElementById('input-field').hidden = true;
-        // couponField.disabled = true;
-        // console.log(couponCodeBtn);
+        document.getElementById('input-field').hidden = true;
+        document.getElementById('apply-btn').hidden = true;
     }
     else{
         alert("Invalid Coupon Code");
     }
-    document.getElementById('input-field').hidden = true;
 })
 
