@@ -35,7 +35,6 @@
         <div class="h-[550px] rounded-[30px] text-center py-20 my-10" style="background: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%),url('./images/banner.png');">
             <h1 class="text-6xl font-extrabold text-white">End-to-End Travel with <br><span class="text-[#1DD100]">Star Line</span></h1>
             <p class="my-9 text-xl text-white">Star Line started journey in 1994 by this Dhaka-Chittagong route with <br> your support.We are very grateful to those who are keep <br> supporting me from 1994 to now.</p>
-            <!-- <button class="rounded-xl py-5 text-xl font-bold bg-[#1DD100] px-7">Buy Tickets</button> -->
             <a href="#booking-section"><button class="rounded-xl py-5 text-xl font-bold bg-[#1DD100] px-7">Buy Tickets</button></a>
         </div>
         <!-- coupon section -->
@@ -117,7 +116,7 @@
                 </div>
             </div>
             <!-- 2nd card -->
-            <div class="flex rounded-2xl bg-base-100 shadow-xl p-4">
+            <div id="ticket-section-design" class="flex rounded-2xl bg-base-100 shadow-xl p-4">
                 <!-- left content -->
                 <div class="w-[645px] border-dashed border-r-2">
                     <h3 class="text-xl my-3 font-bold pl-3">Select Your Seat</h3>
@@ -235,16 +234,8 @@
                             <p class="font-semibold">Price</p>
                         </div>
                         <div class="border-dashed border-y-2 my-3">
-                            <!-- <div class="selected-seat-container flex justify-between items-center my-3">
-                                <p>Economy</p>
-                                <p>550</p>
-                            </div> -->
                             <div id="selected-seat-container">
-                            </div>
-                            <!-- <div class="selected-seat-container flex justify-between items-center mb-3">
-                                <p>Economy</p>
-                                <p></p>
-                            </div> -->
+                            </div>             
                         </div>
                         <!--Total Price-->
                         <div class="flex justify-between font-semibold">
@@ -273,7 +264,7 @@
                         <!--email-->
                         <h3 class="font-semibold my-2">Email Id</h3>
                         <input class="rounded-xl border-2 border-solid border-gray-700 py-3 pl-2 w-full" type="email" name="" id="" placeholder="Enter Your Email Id">
-                        <a href="#my_modal_8"><button class="rounded-xl w-full py-4 text-white font-bold bg-[#1DD100] my-4">Next</button></a>
+                        <a href="#my_modal_8"><button id="popup" class="rounded-xl w-full py-4 text-white font-bold bg-[#1DD100] my-4">Next</button></a>
                     </div>
                     <div class="flex justify-around">
                     <a href="">Terms & Conditions</a>
@@ -291,7 +282,7 @@
     <p class="py-3 text-lg font-semibold">Thank you for Booking Our Bus Seats. We are working hard to find the best service and deals for you.</p>
     <p>Shortly you will find a confirmation in your email.</p>
     <div class="mx-auto mt-4">
-     <a href="#" class="btn px-24 rounded-3xl text-white text-lg bg-[#1DD100]">Close</a>
+     <a href="#ticket-section-design" class="btn px-24 rounded-3xl text-white text-lg bg-[#1DD100]">Close</a>
     </div>
   </div>
 </div>

@@ -14,17 +14,6 @@ for (const btn of allBtn) {
             return;
         }
         count = count + 1;
-        // console.log(selectedSeat);
-        // const selectedSeatContainer = document.getElementById('selected-seat-container');
-        // const p = document.createElement('p');
-        // p.innerText = selectedSeat;
-        // const p2 = document.createElement('p');
-        // p2.innerText = "Economy";
-        // const p3 = document.createElement('p');
-        // p3.innerText = "550";
-        // selectedSeatContainer.appendChild(p);
-        // selectedSeatContainer.appendChild(p2);
-        // selectedSeatContainer.appendChild(p3);
         const selectedSeatContainer = document.getElementById('selected-seat-container');
         const div = document.createElement('div');
         div.classList.add('flex', 'justify-between', 'items-center', 'my-3');
@@ -34,7 +23,6 @@ for (const btn of allBtn) {
         classType.innerText = 'Economy';
         const price = document.createElement('p');
         price.innerText = "550";
-        // console.log(typeof price);
         div.appendChild(seatSerial);
         div.appendChild(classType);
         div.appendChild(price);
@@ -52,16 +40,10 @@ for (const btn of allBtn) {
 
         event.target.style.backgroundColor = "#1DD100";
 
-        // totalCost('total-cost', parseInt(price));
+
         setInnerText('cart-count', count);
     })
 }
-// function totalCost(id, value){
-//     const totalCost = document.getElementById(id).innerText;
-//     const convertedTotalCost = parseInt(totalCost);
-//     const sum = convertedTotalCost + parseInt(value);
-//     setInnerText('total-cost', sum);
-// }
 function setInnerText(id, value) {
     document.getElementById(id).innerText = value;
 }
@@ -69,10 +51,8 @@ const couponCodeBtn = document.getElementById('apply-btn');
 couponCodeBtn.addEventListener('click', function () {
     const couponField = document.getElementById('input-field').value;
     console.log(couponField);
-    // const couponCode = couponField.split(" ").join('').toUpperCase();
     if (couponField === "NEW15") {
         const totalPriceDisplay = document.getElementById('total-price').innerText;
-        // console.log(typeof totalPriceDisplay);
         const totalPrice = count * 550;
         totalPriceDisplay.textContent = `${totalPrice}`;
 
@@ -85,7 +65,6 @@ couponCodeBtn.addEventListener('click', function () {
     }
     else if (couponField === "Couple 20") {
         const totalPriceDisplay = document.getElementById('total-price').innerText;
-        // console.log(typeof totalPriceDisplay);
         const totalPrice = count * 550;
         totalPriceDisplay.textContent = `${totalPrice}`;
         const discountedPrice = totalPriceDisplay * 0.2;
